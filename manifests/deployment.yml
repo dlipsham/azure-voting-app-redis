@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "davesaks1-67a8"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "davesaks1-67a8"
+  template:
+    metadata:
+      labels:
+        app: "davesaks1-67a8"
+    spec:
+      containers:
+        - name: "davesaks1-67a8"
+          image: "davescontainerregistry2.azurecr.io/davesaks1"
+          ports:
+          - containerPort: 80
